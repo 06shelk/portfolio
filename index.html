@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹표준, 웹접근성, 사이트 만들기">
+    <meta name="generator" content="brakets">
+    <title>Seolhwa's portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-    
+    <header>
+        <div class="header">
+            <h2 class="logo">
+                Seolhwa
+            </h2>
+            <nav class="navigation">
+                <a href="#">About me</a>
+                <a href="#">Skills</a>
+                <a href="#">Archiving</a>
+                <a href="#">Project</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cont_start">
+        <h2>SEOLHWA</h2>
+        <h1 class= "typing-animation">PORTFOLIO</h1>
+
+        <p>저는 호기심이 많은 성격으로 마크업 언어에 대한 궁금증이 생겨</p>
+        <p>미림마이스터고 웹솔루션과를 진학했습니다</p>
+        <br>
+        <p>새로운 기술이 나와도  금방 적응해나갈 수 있는 </p>
+        <p>개발자가 되고 싶습니다 ☺️</p>
+    </div>
+
+    <div class="cont_AboutME">    
+        <div class="aboutme_rect">
+            <h1>About me</h1>
+
+            <div class="rectIn">
+                <div class="profile">사진</div>
+
+                <ul>
+                    <li>이설화</li>
+                    <li>이설화</li>
+                    <li>이설화</li>
+                    <li>이설화</li>
+                    <li>이설화</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="cont_Skills">
+        <h1>Skills</h1>
+
+        <p>front-end</p>
+        <div class="Kategorie">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <p>back-end</p>
+        <div class="Kategorie">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <p>Tools</p>
+        <div class="Kategorie">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <p>Certificate</p>
+        <div class="Kategorie">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="cont_Archiving">
+        <h1>Archiving</h1>
+        <div class="Archiving_rect">
+            <div class="Archiving_rectIn">GitHub</div>
+            <div class="Archiving_rectIn">T-Story</div>
+        </div>
+    </div>
+
+
+    <div class="cont_project">
+        <h1>Project</h1>
+        <div></div>
+        <div></div>
+    </div>
+
+    <footer>
+        <p>Copyright 2024. Web Front-end developer portfolio by Lee Seolhwa</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            animateTyping();
+        });
+
+        function animateTyping() {
+            var typingElement = document.querySelector(".typing-animation");
+            typingElement.innerHTML = ""; // 내용 초기화
+            var text = "portfolio"; // 표시할 텍스트
+            var textLength = text.length;
+
+            // 각 글자를 span으로 감싸 타이핑 효과 적용
+            for (var i = 0; i < textLength; i++) {
+                var charSpan = document.createElement("span");
+                charSpan.textContent = text[i];
+                typingElement.appendChild(charSpan);
+            }
+
+            
+        }
+    </script>
 </body>
-</html>
+</html>   
