@@ -2,10 +2,9 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="webstoryboy">
-    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
-    <meta name="keywords" content="웹스토리보이, 웹표준, 웹접근성, 사이트 만들기">
-    <meta name="generator" content="brakets">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Seolhwa's portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -43,13 +42,12 @@
 
             <div class="rectIn">
                 <div class="profile">사진</div>
-
                 <ul>
-                    <li>이설화</li>
-                    <li>이설화</li>
-                    <li>이설화</li>
-                    <li>이설화</li>
-                    <li>이설화</li>
+                    <li><img src="img/free-icon-font-user-3917688.svg"> 이설화</li>
+                    <li><img src="img/free-icon-font-cake-birthday-5527946.svg"> 2006.02.17</li>
+                    <li><img src="img/free-icon-font-home-3917033.svg"> 서울특별시 구로구</li>
+                    <li><img src="img/free-icon-font-envelope-3916611.svg"> w2232@e-mirim.hs.kr</li>
+                    <li><img src="img/free-icon-font-phone-call-5070407.svg"> 010-2673-4349</li>
                 </ul>
             </div>
             
@@ -59,79 +57,65 @@
     <div class="cont_Skills">
         <h1>Skills</h1>
 
-        <p>front-end</p>
-        <div class="Kategorie">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <!-- <p>front-end</p> -->
+        <div class="Kategorie" class="item" data-aos="slide-up">
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
         </div>
 
-        <p>back-end</p>
+        <!-- <p>back-end</p> -->
         <div class="Kategorie">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+        </div>
+<!-- 
+        <p>Tools</p> -->
+        <div class="Kategorie">
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
         </div>
 
-        <p>Tools</p>
+        <!-- <p>Certificate</p> -->
         <div class="Kategorie">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-        <p>Certificate</p>
-        <div class="Kategorie">
-            <div></div>
-            <div></div>
+            <div class="item" data-aos="slide-up"></div>
+            <div class="item" data-aos="slide-up"></div>
         </div>
     </div>
 
     <div class="cont_Archiving">
         <h1>Archiving</h1>
         <div class="Archiving_rect">
-            <div class="Archiving_rectIn">GitHub</div>
-            <div class="Archiving_rectIn">T-Story</div>
+            <div class="Archiving_rectIn" class="item" data-aos="slide-right" >GitHub</div>
+            <div class="Archiving_rectIn" class="item" data-aos="slide-left" >T-Story</div>
         </div>
     </div>
 
 
     <div class="cont_project">
         <h1>Project</h1>
-        <div></div>
-        <div></div>
+        <div class="item" data-aos="zoom-in"></div>
+        <div class="item" data-aos="zoom-in"></div>
     </div>
 
     <footer>
         <p>Copyright 2024. Web Front-end developer portfolio by Lee Seolhwa</p>
     </footer>
 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            animateTyping();
-        });
-
-        function animateTyping() {
-            var typingElement = document.querySelector(".typing-animation");
-            typingElement.innerHTML = ""; // 내용 초기화
-            var text = "portfolio"; // 표시할 텍스트
-            var textLength = text.length;
-
-            // 각 글자를 span으로 감싸 타이핑 효과 적용
-            for (var i = 0; i < textLength; i++) {
-                var charSpan = document.createElement("span");
-                charSpan.textContent = text[i];
-                typingElement.appendChild(charSpan);
-            }
-
-            
-        }
+        AOS.init({
+            duration: 700,
+          })
     </script>
 </body>
 </html>   
