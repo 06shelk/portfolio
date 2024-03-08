@@ -10,10 +10,14 @@
 
 
 /* 폰트 적용 */
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li, span {
     font-family: 'JalnanGothic';
 }
 
 li {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none; 
 }

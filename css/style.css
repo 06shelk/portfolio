@@ -78,7 +78,7 @@ header {
 }
 
 .cont_start h1 {
-    padding-bottom: 70px;
+    padding-bottom: 90px;
     font-size: 3em;
 }
 
@@ -94,6 +94,7 @@ header {
     align-items: center;
 
     padding: 60px;
+    
 }
 
 .cont_AboutME h1 {
@@ -106,6 +107,7 @@ header {
     height: 450px;
     background-color: #6DA4AA;
     border-radius: 10px; 
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 .aboutme_rect h1 {
@@ -161,42 +163,59 @@ header {
     display: flex;
 }
 
-.Kategorie div {
+
+.box-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+
+.box {
+    position: relative;
+    width: 70px; height: 70px;
+    /* border: 1px solid #283593; */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+
+    margin: 20px 10px;
+}
+
+  .box img {
+    width: 100%;
+  }
+  
+  .box .info {
+    color: #fff;
+    position: absolute; left: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
     width: 70px;
     height: 70px;
-    background-color: #333;
-    margin: 10px 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-}
+    box-sizing: border-box;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
 
-.Kategorie .container {
-    position: relative;
-}
-
-.container img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: inherit;
-    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-.container:hover .overlay {
+  }
+  .box:hover .info {
     opacity: 1;
-}
+  }
+  .box .info p {
+    font-size: 8px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+    
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
 
 /* 깃허브, 블로그~ */
 .cont_Archiving {
@@ -228,12 +247,40 @@ header {
     border-radius: 10px;
     background-color: #fff;
     margin-top: 30px;
+    padding: 30px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
+
+
+.Archiving_rectIn h2 {
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+.Archiving_rectIn p a {
+    text-decoration: none;
+    color: #3B3486;
+}
+
+.Archiving_rectIn h2 img {
+    padding-right: 10px;
+}
+
+.Archiving_rectIn div {
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.Archiving_rectIn div ul li {
+    list-style-type: disc;
+    padding: 5px;
+}
+
 
 /* 프로젝트 */
 .cont_project {
     width: 100%;
-    height: 1500px;
+    height: 2000px;
     background-color: #647D87;
 
     display: flex;
@@ -245,13 +292,83 @@ header {
     padding : 30px;
 }
 
-.cont_project div {
+.cont_project .pro {
     width: 990px;
     height: 500px;
     background-color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    padding: 30px;
+    /* display: flex;
+    align-items: center; */
 }
+
+.pro h3 {
+    font-size: 1.8em;
+    padding: 30px;
+}
+
+.pro .slideAndExp {
+    display: flex;
+    width: 920px;
+    height: 300px;
+}
+
+.pro .slide {
+    padding-right: 100px;
+}
+
+.arrowSlider span {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+/* 슬라이더  */
+.mainSlide {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.mainSlide div img {
+    width: 400px;
+    height: 250px;
+}
+
+.arrowSlider {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slideAndExp div .text {
+    padding-bottom: 15px;
+}
+
+.slideAndExp div .text:nth-last-child(2) {
+    padding-bottom: 30px;
+}
+
+.slideAndExp div ul {
+    padding: 10px 0;
+}
+
+.slideAndExp div ul li{
+    padding: 3px 0;
+}
+
+.slideAndExp div p a {
+    color: #3B3486;
+    margin-top: 20px;
+}
+
+.source {
+    margin-top: 30px;
+}
+
+
 
 footer {
     width: 100%;
@@ -261,6 +378,10 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+
+
+
 
 
 /* 타이핑 애니메이션 */
@@ -291,13 +412,20 @@ footer {
      100% { width: 2px; } 
 }
 
-.item {
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
-    padding-top: 75px;
-    background: #ccc;
-    text-align: center;
-    color: #FFF;
-    font-size: 3em;
-  }
+/* tablet */
+/* 최대 너비가 720일 때 적용 즉, 720px보다 작을 때 적용 */
+@media screen and (max-width: 720px){
+    body {
+        background-color: rgb(113, 184, 255);
+    }
+}
+
+
+/* mobile */
+/* 최대 너비가 540일 때 적용 즉, 540px보다 작을 때 적용 */
+@media screen and (max-width: 540px){
+    body {
+        background-color: darkcyan;
+    }
+}
+
