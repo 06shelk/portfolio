@@ -343,6 +343,14 @@ header {
     justify-content: space-between;
 }
 
+.slideAndExp .texts {
+    display: flex;
+    flex-direction: column;
+
+    width: 580px;
+    z-index: 2;
+}
+
 .slideAndExp div .text {
     padding-bottom: 15px;
 }
@@ -368,8 +376,6 @@ header {
     margin-top: 30px;
 }
 
-
-
 footer {
     width: 100%;
     height: 100px;
@@ -378,11 +384,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
 
 /* 타이핑 애니메이션 */
 .typing-animation {
@@ -418,6 +419,100 @@ footer {
     body {
         background-color: rgb(113, 184, 255);
     }
+
+    .header {
+        width: 720px; 
+        padding: 15px;
+    }
+
+    .logo  {
+        font-size: 1.5em;
+    }
+
+    .navigation a {
+        padding: 6px 8px;
+    }
+
+    .cont_start {
+        background-size: 720px 400px;
+    }
+
+    .aboutme_rect { 
+        width: 600px;
+    }
+
+    .aboutme_rect ul li {
+        font-size: 1em;
+    }
+
+    .rectIn .profile { 
+        margin: 30px;
+    }
+
+    .Archiving_rect {
+        width: 630px; 
+    }
+
+    .Archiving_rectIn {
+        width: 300px;
+        padding: 30px;
+    }
+
+    .Archiving_rectIn h2 {
+        font-size: 1.5em;
+    }
+    
+    .Archiving_rectIn p a {
+        font-size: 1em;
+    }
+    
+    .Archiving_rectIn h2 img {
+        width: 32px;
+    }
+    
+    
+    .Archiving_rectIn div ul li {
+        list-style-type: disc;
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    .cont_project .pro {
+        width: 600px;
+        height: 730px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cont_project .pro .slideAndExp {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    .pro .slide {
+        padding-right: 0px;
+    }
+
+    .texts {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hr {
+        width: 100%;
+    }
+
+    .source {
+        margin-top: 10px;
+    }
+    
 }
 
 
