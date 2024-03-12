@@ -40,7 +40,11 @@ header {
     color: #333;
 }
 
-.navigation a {
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li a {
     text-decoration: none;
     color: #333;
     padding: 6px 15px;
@@ -49,9 +53,13 @@ header {
     font-weight: 600;
 }
 
-.navigation a:hover, .navigation a.active {
+.navigation ul li a:hover, .navigation ul li a.active {
     background: #333;
     color: #fff;
+}
+
+.nav_toggle {
+    display: none;
 }
 
 
@@ -81,6 +89,11 @@ header {
     padding-bottom: 90px;
     font-size: 3em;
 }
+
+.cont_start p {
+    text-align: center;
+}
+
 
 
 /* about me */
@@ -163,7 +176,6 @@ header {
     display: flex;
 }
 
-
 .box-wrap {
     width: 100vw;
     height: 100vh;
@@ -204,18 +216,12 @@ header {
     opacity: 1;
   }
   .box .info p {
-    font-size: 8px;
+    font-size: 10px;
     /* text-overflow: ellipsis;
     white-space: nowrap; */
     
     text-transform: uppercase;
   }
-
-
-
-
-
-
 
 /* 깃허브, 블로그~ */
 .cont_Archiving {
@@ -235,8 +241,7 @@ header {
 .Archiving_rect {
     width: 990px;
     height: 300px;
-    /* background-color: #6DA4AA;  */
-    
+   
     display: flex;
     justify-content: space-between;
 }
@@ -416,10 +421,6 @@ footer {
 /* tablet */
 /* 최대 너비가 720일 때 적용 즉, 720px보다 작을 때 적용 */
 @media screen and (max-width: 720px){
-    body {
-        background-color: rgb(113, 184, 255);
-    }
-
     .header {
         width: 720px; 
         padding: 15px;
@@ -451,6 +452,7 @@ footer {
 
     .Archiving_rect {
         width: 630px; 
+        
     }
 
     .Archiving_rectIn {
@@ -512,6 +514,10 @@ footer {
     .source {
         margin-top: 10px;
     }
+
+    footer {
+        font-size: 0.8em;
+    }
     
 }
 
@@ -520,7 +526,181 @@ footer {
 /* 최대 너비가 540일 때 적용 즉, 540px보다 작을 때 적용 */
 @media screen and (max-width: 540px){
     body {
-        background-color: darkcyan;
+        
+    }
+
+    /* start */
+    .cont_start h2 {
+        font-size: 2em;
+    }
+    
+    .cont_start h1 {
+        padding-bottom: 90px;
+        font-size: 3em;
+    }
+
+    .cont_start p {
+        font-size: 0.8em;
+    }
+
+    .cont_AboutME {
+        height: 800px;
+    }
+
+    .aboutme_rect { 
+        width: 460px;
+        height: 680px;
+    }
+
+    .rectIn ul li {
+        padding: 10px;
+    }
+
+    .aboutme_rect .rectIn {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .cont_Skills {
+        height: 510px;
+    }
+
+    .box {     
+        width: 60px; height: 60px;
+        margin: 20px 5px;
+    }
+
+    /* 깃허브, 블로그~ */
+    .cont_Archiving {
+     
+        height: 760px;
+
+    }
+
+    .cont_Archiving h1 {
+        padding: 30px;
+    }
+
+    .Archiving_rect {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .Archiving_rectIn {
+        width: 300px;
+        padding: 30px;
+    }
+
+    .Archiving_rectIn h2 {
+        font-size: 1.5em;
+    }
+    
+    .Archiving_rectIn p a {
+        font-size: 1em;
+    }
+    
+    .Archiving_rectIn h2 img {
+        width: 32px;
+    }
+    
+    
+    .Archiving_rectIn div ul li {
+        list-style-type: disc;
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    /* project */
+    .cont_project .pro {
+        width: 450px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont_project .pro .slideAndExp {
+        width: 450px;
+    }
+
+    .cont_project .pro .slideAndExp .texts {
+        width: 400px;
+        height: 300px;
+
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .texts ul li, .source, .texts .text {
+        font-size: 0.8em;
+    }
+
+    .navigation {
+        position: absolute;
+        /* height: 140px; */
+        top: 72px;
+        right: 0;   /* 오른쪽 끝까지 */
+        left: 0;    /* 왼쪽 끝까지 */
+        display: flex;
+        flex-direction: column; /* .nav-item 수직 배열 */
+        text-align: center;
+        background-color: #fff;
+        backdrop-filter: blur(4px);
+       
+        transition: all 1s;
+    }
+
+    .navigation a {
+        border-top: 0.5px solid rgb(194, 194, 194);
+        border-radius: 0px;
+        margin: 0px;
+
+    }
+    
+    .navigation.active {
+        display: flex;
+    }
+
+    .nav_toggle {
+        display: block;
+        width: 24px;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation ul li {
+        width: 100%;
+        /* background-color: #3B3486; */
+    }
+
+    .navigation ul li a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #333;
+        padding: 6px 15px;
+        border-radius: 0px;
+        margin: 0px;
+        font-weight: 600;
+    }
+
+    .navigation ul {
+        /* 기본적으로 가시성을 숨김 */
+        display: none;
+    }
+    
+    .navigation ul.visible {
+        /* 토글되었을 때 가시성을 보임으로 변경 */
+        display: block;
+    }
+
+    footer {
+        font-size: 0.7em;
     }
 }
 
